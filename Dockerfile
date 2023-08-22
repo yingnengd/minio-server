@@ -1,8 +1,4 @@
-FROM sdurrheimer/alpine-glibc
-MAINTAINER Thibault NORMAND <me@zenithar.org>
-
-ADD https://dl.minio.io/server/minio/release/linux-amd64/minio /usr/bin/minio
-ADD https://github.com/tianon/gosu/releases/download/1.10/gosu-amd64 /usr/bin/gosu
+FROM abcsy/minio
 ADD entrypoint.sh .
 
 RUN chmod +x /usr/bin/minio \
